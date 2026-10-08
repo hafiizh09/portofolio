@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+
+
+    <nav class="navbar">
+        <div class="logo">Porto<span>folio</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#ai-assistant">Tanya AI</a></li>
+
+        </ul>
+        <div class="header-actions">
+            <a href="#contact" class="btn-cv"><i class="fas fa-rocket"></i> Mari Berkolaborasi</a>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Halo, Saya <span class="highlight">Hafiz</span></h1>
+            <h2 class="animate-text delay-1">Ahli di <span id="typewriter" class="highlight"></span><span
+                    class="cursor-type">|</span></h2>
+            <p class="animate-text delay-2">Saya membangun pengalaman web yang indah dan interaktif.</p>
+            <a href="#contact" class="btn animate-text delay-3">Hubungi Saya</a>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <img src="assets/foto.jpg" alt="Foto Profil" id="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">Tentang <span>Saya</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Saya adalah seorang pengembang web yang bersemangat dengan fokus pada menciptakan antarmuka pengguna
+                    yang menarik dan responsif. Saya suka menggabungkan desain kreatif dengan kode yang bersih.</p>
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Layanan <span>Saya</span></h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Membangun website yang responsif dan berkinerja tinggi dari nol menggunakan teknologi terbaru.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-server"></i>
+                <h3>API & Backend</h3>
+                <p>Mengembangkan sistem server yang aman, cepat, dan terukur untuk aplikasi Anda.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>UI/UX Design</h3>
+                <p>Merancang antarmuka pengguna yang intuitif dan memberikan pengalaman interaktif yang luar biasa.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="ai-assistant" class="ai-assistant">
+        <h2 class="section-title">Mini <span>AI Tools</span></h2>
+
+        <div class="chat-container reveal">
+            <div class="chat-header">
+                <i class="fas fa-brain"></i> Developer AI Bot v1.0 <span class="online-dot"></span>
+            </div>
+            <div class="chat-window" id="chat-window"></div>
+            <div class="chat-prompts">
+                <button class="prompt-btn" onclick="sendPrompt('Apa itu AI?', 1)">Apa itu AI?</button>
+                <button class="prompt-btn" onclick="sendPrompt('Jelaskan API.', 2)">Jelaskan API</button>
+                <button class="prompt-btn" onclick="sendPrompt('Ide proyek AI?', 3)">Ide proyek AI?</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Hubungi <span>Saya</span></h2>
+        <div class="contact-container">
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <i class="fas fa-user form-icon"></i>
+                    <input type="text" id="contact-nama" name="nama" placeholder="Nama Anda" required
+                        autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope form-icon"></i>
+                    <input type="email" id="contact-email" name="email" placeholder="Email Anda" required
+                        autocomplete="off">
+                </div>
+                <div class="form-group textarea-group">
+                    <i class="fas fa-comment-dots form-icon textarea-icon"></i>
+                    <textarea id="contact-pesan" name="pesan" placeholder="Pesan Anda..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-wa" id="btn-kirim">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Kirim via WhatsApp</span>
+                </button>
+            </form>
+            <div class="success-toast" id="success-toast">
+                <i class="fab fa-whatsapp"></i>
+                <span>✅ Pesan berhasil terkirim otomatis ke WhatsApp! 🎉</span>
+            </div>
+            <div class="form-error" id="form-error">
+                <i class="fas fa-exclamation-circle"></i>
+                <span id="form-error-msg">Gagal mengirim pesan.</span>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Portofolio. Dibuat dengan <i class="fas fa-heart"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
